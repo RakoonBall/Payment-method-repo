@@ -10,8 +10,35 @@
 <body>
     <form action="">
         <h1>payment form</h1>
+        <h2>required fields are following a *</h2>
         <h2>contact information</h2>
-        <p>Name: <input type="text"></p>
+        <p>Name:* <input type="text" name="name"  placeholder="ur name" required></p>
+       <fieldset>   
+        <legend>gender</legend>
+        <p>
+        Male <input type="radio" name="gender" id="male">
+        Female<input type="radio" name="gender" id="female">
+        </p>
+       </fieldset>
+        <p>Address:<textarea name="address" id="address" cols="100" rows="10"></textarea></p>
+        <p>Email:* <input type="email" name="email" id="email" required></p>
+        <p>Pincode:*<input type="number" name="pincode" id="pincode" required></p>
+        <h2>Payment Information</h2>
+        <p>Card Type:*
+            <select name="card_type" id="card_type" required>
+                <option value="">--select a Card Type--</option>
+                <option value="mastercard">masrercard</option>
+                <option value="rupay">rupay</option>
+                <option value="visa">visa</option>
+            </select>
+        </p>
+        <p>Card Number *<input type="number" name="card_number" id="card_number" required></p>
+        <p>Expiration Date:* <input type="date" name="exp_dat" id="exp_dat" required></p>
+        <p>CVV *<input type="password" name="password" id="password" required></p>
+        <input type="submit" value="Pay Now">
+
+     
+
     </form>
 
     
